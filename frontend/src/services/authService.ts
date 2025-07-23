@@ -15,7 +15,7 @@ export class AuthService {
       
       return authData;
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -31,7 +31,7 @@ export class AuthService {
       
       return authData;
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -42,7 +42,7 @@ export class AuthService {
       const data = handleApiResponse(response);
       return data.user;
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 

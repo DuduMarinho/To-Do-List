@@ -26,7 +26,7 @@ export class TaskService {
       
       return handleApiResponse(response);
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -37,7 +37,7 @@ export class TaskService {
       const result = handleApiResponse(response);
       return result.task;
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -48,7 +48,7 @@ export class TaskService {
       const result = handleApiResponse(response);
       return result.task;
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -59,7 +59,7 @@ export class TaskService {
       const result = handleApiResponse(response);
       return result.task;
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -68,7 +68,7 @@ export class TaskService {
     try {
       await api.delete(`/tasks/${id}`);
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 
@@ -87,7 +87,7 @@ export class TaskService {
     try {
       await api.delete('/tasks/completed/all');
     } catch (error: any) {
-      handleApiError(error);
+      return handleApiError(error);
     }
   }
 } 
